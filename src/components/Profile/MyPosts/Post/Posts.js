@@ -7,7 +7,7 @@ const Posts = (props) => {
             <img src='https://jooinn.com/images/face-14.jpg' alt='avatar'/>
             {props.message}
             <div>
-                <span>like: {props.likeCount}</span>
+                <span>like: {props.likesCount}</span>
             </div>
         </div>
     );

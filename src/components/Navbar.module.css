@@ -1,0 +1,17 @@
+.nav {
+    grid-area: n;
+    background-color: #e0c291;
+}
+
+.item {
+    color: white;
+}
+
+.item.active {
+    color: #0048ff;
+}
+
+a:hover {
+    color: green;
+    font-weight: bold;
+}

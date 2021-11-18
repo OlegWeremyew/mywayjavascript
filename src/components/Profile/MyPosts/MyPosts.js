@@ -4,9 +4,7 @@ import Posts from "./Post/Posts";
 
 let posts = [
     {id: 1, message: "Hi, how are you?'", likesCount: 12},
-    {id: 2, message: "I'm ok, and you?", likesCount: 7},
-    {id: 3, message: "Potato", likesCount: 7},
-    {id: 4, message: "Big pig", likesCount: 7},
+    {id: 2, message: "I'm great, and you?", likesCount: 7},
 ];
 
 let postsElents = posts.map(p => <Posts message={p.message} likesCount={p.likesCount} id={p.id}/>)

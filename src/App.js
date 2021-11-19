@@ -16,9 +16,10 @@ const App = (props) => {
             <Navbar/>
             <div className="app-wrapper-content">
                 <Routes>
-                    <Route path="/dialogs/*" element={<Dialogs messagesData={props.messagesData}
-                                                               dialogsData={props.dialogsData}/>}/>
-                    <Route path="/profile/*" element={<Profile posts={props.posts}/>}/>
+                    <Route path="/dialogs/*" element={<Dialogs
+                        state={props.state.dialogsPage}/>}/>
+                    <Route path="/profile/*" element={<Profile
+                        state={props.state.profilePage}/>}/>
                     <Route path="/news" element={<News/>}/>
                     <Route path="/music" element={<Music/>}/>
                     <Route path="/setting" element={<Settings/>}/>
@@ -28,4 +29,5 @@ const App = (props) => {
     );
 }
 
+//24-выпуск
 export default App;

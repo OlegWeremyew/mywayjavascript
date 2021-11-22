@@ -1,21 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from "react-router-dom";
-import state, {addPost} from "./redux/state";
+import {rerenderEnteireTree} from "./render";
+import state from "./redux/state";
 
-/*addPost("dffg");*/
-
-ReactDOM.render(
-    <BrowserRouter>
-        <App
-            state={state}
-            addPost={addPost}
-        />
-    </BrowserRouter>,
-    document.getElementById('root')
-);
+rerenderEnteireTree(state);
 
 reportWebVitals();

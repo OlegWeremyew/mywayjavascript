@@ -20,9 +20,9 @@ const App = (props) => {
                         state={props.state.dialogsPage}/>}/>
                     <Route path="/profile/*" element={<Profile
                         state={props.state.profilePage}/>}/>
-                    <Route path="/news" element={<News/>}/>
-                    <Route path="/music" element={<Music/>}/>
-                    <Route path="/setting" element={<Settings/>}/>
+                    <Route path="/news/*" element={<News/>}/>
+                    <Route path="/music/*" element={<Music/>}/>
+                    <Route path="/setting/*" element={<Settings/>}/>
                 </Routes>
             </div>
         </main>

@@ -72,8 +72,7 @@ export const updateNewPostText = (newText) => {
     rerenderEnteireTree(state)
 }
 
-export const subscribe = (observer) => {
-    rerenderEnteireTree = observer
-}
+export const subscribe = (observer) => (rerenderEnteireTree = observer)
+
 
 export default state

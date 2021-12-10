@@ -1,22 +1,18 @@
 .dialogs {
-    display: grid;
-    grid-template-columns: 1fr 11fr;
-}
-
-.dialogs .active {
-    padding-top: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .dialog img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border: 2px solid red;
     border-radius: 50%;
 }
 
 .dialogItems {
     padding: 10px;
+    text-align: center;
 
 }
 
@@ -31,4 +27,9 @@
 
 .message {
 
+}
+
+textarea {
+    width: 250px;
+    height: 100px;
 }

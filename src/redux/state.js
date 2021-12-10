@@ -97,18 +97,23 @@ let store = {
         } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
             this._state.dialogsPage.newMessageBody = action.body
             this._callSubscriber(this._state)
+        } else if (action.type === SEND_MESSAGE) {
+            let body = this._state.dialogsPage.newMessageBody
+            this._state.dialogsPage.newPostText = ""
+            this._state.dialogsPage.messages.push( {id: 6, message: body},)
+            this._callSubscriber(this._state)
         }
     }
 }
 
-export const addPostActionCreater = () => ({type: ADD_POST})
+export const addPostCreater = () => ({type: ADD_POST})
 
-export const updateNewPostTextActionCreater = (text) =>
+export const updateNewPostTextCreater = (text) =>
     ({type: UPDATE_NEW_POST_TEXT, newText: text})
 
-export const a222 = () => ({type: SEND_MESSAGE})
+export const sendMessageCreator = () => ({type: SEND_MESSAGE})
 
-export const a111 = (text) =>
+export const updateNewMessageBodyCreater = (text) =>
     ({type: UPDATE_NEW_MESSAGE_BODY, body: text})
 
 export default store

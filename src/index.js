@@ -13,8 +13,6 @@ let rerenderEnteireTree = (state) => {
             <App
                 state={store.getState()}
                 dispatch={store.dispatch.bind(store)}
-                //addPost={store.addPost.bind(store)}
-                //updateNewPostText={store.updateNewPostText.bind(store)}
             />
         </BrowserRouter>,
         document.getElementById('root')

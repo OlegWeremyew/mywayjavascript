@@ -50,25 +50,28 @@ let store = {
             ]
         }
     },
-    rerenderEnteireTree(){
+    getState(){
+        return this._state;
+    },
+    _callSubscriber(){
         console.log("state")
     },
     addPost(postMessage){
         let newPost = {
             id: 5,
-            message: state.profilePage.newPostText,
+            message: this._state.profilePage.newPostText,
             likesCount: 0
         }
-        state.profilePage.posts.push(newPost);
-        state.profilePage.newPostText = ""
-        rerenderEnteireTree(state)
+        this._state.profilePage.posts.push(newPost);
+        this._state.profilePage.newPostText = ""
+        this._callSubscriber(this._state)
     },
     updateNewPostText(newText){
-        state.profilePage.newPostText = newText
-        rerenderEnteireTree(state)
+        this._state.profilePage.newPostText = newText
+        this._callSubscriber(this._state)
     },
     subscribe(observer){
-        (rerenderEnteireTree = observer)
+        this._callSubscriber = observer
     }
 }
 

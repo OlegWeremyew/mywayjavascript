@@ -6,13 +6,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
-import {addPost, updateNewPostText} from "./redux/state";
 
 let rerenderEnteireTree = (state) => {
     ReactDOM.render(
         <BrowserRouter>
             <App
-                state={store._state}
+                state={store.getState()}
                 addPost={store.addPost}
                 updateNewPostText={store.updateNewPostText}
             />
@@ -20,8 +19,8 @@ let rerenderEnteireTree = (state) => {
         document.getElementById('root')
     );
 }
-rerenderEnteireTree(state);
+rerenderEnteireTree(store.getState());
 
-subscribe(rerenderEnteireTree)
+store.subscribe(rerenderEnteireTree)
 
 reportWebVitals();

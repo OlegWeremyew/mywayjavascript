@@ -85,8 +85,8 @@ let store = {
             this._state.profilePage.posts.push(newPost);
             this._state.profilePage.newPostText = ""
             this._callSubscriber(this._state)
-        } else if (action.type === "ADD-POST" === "UPDATE-NEW-POST-TEXT") {
-            this._state.profilePage.newPostText = newText
+        } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+            this._state.profilePage.newPostText = action.text
             this._callSubscriber(this._state)
         }
     }

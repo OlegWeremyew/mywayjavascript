@@ -20,22 +20,19 @@ const App = (props) => {
                     <Route path="/dialogs/*" element={
                         <Dialogs
                             state={props.state.dialogsPage}/>}/>
+
                     <Route path="/profile/*" element={
                         <Profile
                             profilePage={props.state.profilePage}
                             dispatch={props.dispatch}/>}/>
-                    <Route path="/news/*" element={
-                        <News/>}/>
-                    <Route path="/music/*" element={
-                        <Music/>}/>
-                    <Route path="/setting/*" element={
-                        <Settings/>}/>
+
+                    <Route path="/news/*" element={<News/>}/>
+                    <Route path="/music/*" element={<Music/>}/>
+                    <Route path="/setting/*" element={<Settings/>}/>
 
                 </Routes>
             </div>
         </main>
     );
 }
-
-//24-выпуск
 export default App;

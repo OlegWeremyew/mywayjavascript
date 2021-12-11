@@ -113,8 +113,8 @@ export const updateNewPostTextCreater = (text) =>
 
 export const sendMessageCreator = () => ({type: SEND_MESSAGE})
 
-export const updateNewMessageBodyCreater = (text) =>
-    ({type: UPDATE_NEW_MESSAGE_BODY, body: text})
+export const updateNewMessageBodyCreater = (body) =>
+    ({type: UPDATE_NEW_MESSAGE_BODY, body: body})
 
 export default store
 window.store = store

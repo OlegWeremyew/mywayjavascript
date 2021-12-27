@@ -68,13 +68,11 @@ let store = {
     },
 
     dispatch(action) {
-
         this._state.profilePage = profilePageReducer(this._state.profilePage, action)
         this._state.dialogsPage = dialogsPageReducer(this._state.dialogsPage, action)
         this._state.sidebar = sidebarReducer(this._state.sidebar, action)
 
         this._callSubscriber(this._state)
-
     }
 }
 

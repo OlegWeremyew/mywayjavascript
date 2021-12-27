@@ -1,7 +1,9 @@
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+
 const UPDATE_NEW_MESSAGE_BODY = "UPDATE-NEW-MESSAGE-BODY "
 const SEND_MESSAGE = "SEND-MESSAGE"
+
 let store = {
     _state: {
         profilePage: {
@@ -53,7 +55,8 @@ let store = {
                 {id: 6, message: "Melon is yellow"},
             ],
             newMessageBody: ""
-        }
+        },
+        sidebar: {}
     },
     _callSubscriber() {
         console.log("state")
@@ -65,21 +68,6 @@ let store = {
     subscribe(observer) {
         this._callSubscriber = observer
     },
-
-    /*   _addPost(postMessage) {
-           let newPost = {
-               id: 5,
-               message: this._state.profilePage.newPostText,
-               likesCount: 0
-           }
-           this._state.profilePage.posts.push(newPost);
-           this._state.profilePage.newPostText = ""
-           this._callSubscriber(this._state)
-       },*/
-    /*    _updateNewPostText(newText) {
-            this._state.profilePage.newPostText = newText
-            this._callSubscriber(this._state)
-        },*/
 
     dispatch(action) {
         if (action.type === ADD_POST) {
@@ -100,7 +88,7 @@ let store = {
         } else if (action.type === SEND_MESSAGE) {
             let body = this._state.dialogsPage.newMessageBody
             this._state.dialogsPage.newPostText = ""
-            this._state.dialogsPage.messages.push( {id: 6, message: body},)
+            this._state.dialogsPage.messages.push({id: 6, message: body},)
             this._callSubscriber(this._state)
         }
     }

@@ -4,11 +4,11 @@ import dialogsPageReducer from "./dialogsPageReducer";
 import sidebarReducer from "./sidebarReducer";
 
 let reducers = combineReducers({
-    profilePageReducer: profilePageReducer,
-    dialogsPageReducer: dialogsPageReducer,
-    sidebarReducer: sidebarReducer
-})
+    profilePage: profilePageReducer,
+    dialogsPage: dialogsPageReducer,
+    sidebar: sidebarReducer
+});
 
-let store = createStore(reducers)
+let store = createStore(reducers);
 
 export default store

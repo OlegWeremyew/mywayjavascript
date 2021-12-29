@@ -1,22 +1,20 @@
 {
   "files": {
     "main.css": "/mywayjavascript/static/css/main.0483b8ca.chunk.css",
-    "main.js": "/mywayjavascript/static/js/main.d1148c1d.chunk.js",
-    "main.js.map": "/mywayjavascript/static/js/main.d1148c1d.chunk.js.map",
-    "runtime-main.js": "/mywayjavascript/static/js/runtime-main.fb186cc5.js",
-    "runtime-main.js.map": "/mywayjavascript/static/js/runtime-main.fb186cc5.js.map",
-    "static/js/2.ef5784e8.chunk.js": "/mywayjavascript/static/js/2.ef5784e8.chunk.js",
-    "static/js/2.ef5784e8.chunk.js.map": "/mywayjavascript/static/js/2.ef5784e8.chunk.js.map",
-    "static/js/3.f57db35a.chunk.js": "/mywayjavascript/static/js/3.f57db35a.chunk.js",
-    "static/js/3.f57db35a.chunk.js.map": "/mywayjavascript/static/js/3.f57db35a.chunk.js.map",
+    "main.js": "/mywayjavascript/static/js/main.0bafd5c8.chunk.js",
+    "main.js.map": "/mywayjavascript/static/js/main.0bafd5c8.chunk.js.map",
+    "runtime-main.js": "/mywayjavascript/static/js/runtime-main.709f00a6.js",
+    "runtime-main.js.map": "/mywayjavascript/static/js/runtime-main.709f00a6.js.map",
+    "static/js/2.764e6de1.chunk.js": "/mywayjavascript/static/js/2.764e6de1.chunk.js",
+    "static/js/2.764e6de1.chunk.js.map": "/mywayjavascript/static/js/2.764e6de1.chunk.js.map",
     "index.html": "/mywayjavascript/index.html",
     "static/css/main.0483b8ca.chunk.css.map": "/mywayjavascript/static/css/main.0483b8ca.chunk.css.map",
-    "static/js/2.ef5784e8.chunk.js.LICENSE.txt": "/mywayjavascript/static/js/2.ef5784e8.chunk.js.LICENSE.txt"
+    "static/js/2.764e6de1.chunk.js.LICENSE.txt": "/mywayjavascript/static/js/2.764e6de1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fb186cc5.js",
-    "static/js/2.ef5784e8.chunk.js",
+    "static/js/runtime-main.709f00a6.js",
+    "static/js/2.764e6de1.chunk.js",
     "static/css/main.0483b8ca.chunk.css",
-    "static/js/main.d1148c1d.chunk.js"
+    "static/js/main.0bafd5c8.chunk.js"
   ]
 }

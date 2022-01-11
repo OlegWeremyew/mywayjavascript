@@ -6,3 +6,8 @@
 .selectedPage{
     font-weight: 700;
 }
+
+.numberPage{
+    display: flex;
+    flex-wrap: wrap;
+}

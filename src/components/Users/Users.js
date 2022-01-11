@@ -4,7 +4,7 @@ import userPhoto from "../../assets/images/user.png";
 
 const Users = (props) => {
 
-    let pagesCount = Math.ceil(props.totalUserCount / props.pageSize)
+    let pagesCount = Math.ceil(props.totalUserCount / props.pageSize) / 400
 
     let pages = []
 
@@ -49,6 +49,7 @@ const Users = (props) => {
                     </span>
                 </div>)
             }
+
         </div>
     );
 };

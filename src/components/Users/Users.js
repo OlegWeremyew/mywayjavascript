@@ -2,6 +2,7 @@ import React from 'react';
 import c from "./Users.module.css";
 import userPhoto from "../../assets/images/user.png";
 import {NavLink} from "react-router-dom";
+import {usersAPI} from "../../api";
 
 const Users = (props) => {
 
@@ -12,6 +13,7 @@ const Users = (props) => {
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i)
     }
+
 
     return (
         <div>

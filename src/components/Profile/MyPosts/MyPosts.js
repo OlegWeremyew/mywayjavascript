@@ -4,7 +4,7 @@ import Posts from "./Post/Posts";
 
 const MyPosts = (props) => {
 
-    let postsElents = props.posts.map(p => <Posts message={p.message} likesCount={p.likesCount} id={p.id}/>)
+    let postsElements = props.posts.map(p => <Posts message={p.message} likesCount={p.likesCount} id={p.id}/>)
 
     let newPostElement = React.createRef();
 
@@ -29,7 +29,7 @@ const MyPosts = (props) => {
                 </div>
             </div>
             <div className={c.posts}>
-                {postsElents}
+                {postsElements}
             </div>
         </div>
     );

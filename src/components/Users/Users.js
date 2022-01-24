@@ -2,8 +2,6 @@ import React from 'react';
 import c from "./Users.module.css";
 import userPhoto from "../../assets/images/user.png";
 import {NavLink} from "react-router-dom";
-import {usersAPI} from "../../API/api";
-import {follow} from "../../redux/usersReducer";
 
 const Users = (props) => {
 

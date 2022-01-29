@@ -6,8 +6,12 @@ import MyPostsCntainer from "./MyPosts/MyPostsCntainer";
 const Profile = (props) => {
     return (
         <div className={c.posts}>
-            <ProfileInfo profile={props.profile}/>
-            <MyPostsCntainer />
+            <ProfileInfo
+                profile={props.profile}
+                status={props.status}
+                updateStatus={props.updateStatus}
+            />
+            <MyPostsCntainer/>
         </div>
     );
 }

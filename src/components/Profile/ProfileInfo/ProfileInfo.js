@@ -1,6 +1,8 @@
 import React from 'react';
 import c from "./ProfileInfo.module.css"
 import avatarDefault from '../../../assets/images/icon.png'
+import {ProfileStatus} from "./ProfileStatus/ProfileStatus";
+
 const ProfileInfo = (props) => {
 
     return (
@@ -10,10 +12,11 @@ const ProfileInfo = (props) => {
             </div>
             <div className={c.discriptionBlock}>
                 <div className={c.avaStyle}>
-                    <img src={props.profile && props.profile.photos.large !== null ? props.profile.photos.large : avatarDefault}
-                          alt={""}/>
+                    <img
+                        src={props.profile && props.profile.photos.large !== null ? props.profile.photos.large : avatarDefault}
+                        alt={""}/>
                 </div>
-                <div>Ava + description</div>
+                <ProfileStatus status={"Hello"}/>
             </div>
         </div>
     );

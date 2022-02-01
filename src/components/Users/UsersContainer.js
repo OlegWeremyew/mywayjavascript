@@ -58,5 +58,5 @@ export const UsersContainer = compose(connect(mapStateToProps, {
         toggleFollowingProgress,
         getUsers,
     }),
-        withAuthRedirect
+       // withAuthRedirect
 )(UsersAPIComponent)

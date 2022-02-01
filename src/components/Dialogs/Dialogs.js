@@ -3,8 +3,11 @@ import c from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogsItem";
 import Message from "./Message/Message";
 import {Field, reduxForm} from "redux-form";
+import {Textarea} from "../../common/FormsControls/FormsControls";
+import {maxLengthCreator, required} from "../../utils/validators/validators";
+import {AddMessageFormRedux} from "./AddMessageForm/AddMessageForm";
 
-const Dialogs = (props) => {
+export const Dialogs = (props) => {
 
     let state = props.dialogsPage
 
@@ -30,18 +33,3 @@ const Dialogs = (props) => {
     );
 };
 
-export default Dialogs;
-
-const AddMessageForm = (props) => {
-    return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
-                <Field component={"textarea"} name={"newMessageBody"} placeholder={"enter your message"}/>
-            </div>
-            <div>
-                <button>Send</button>
-            </div>
-        </form>
-    )
-}
-const AddMessageFormRedux = reduxForm({form:"dialogAddMessageForm"})(AddMessageForm)

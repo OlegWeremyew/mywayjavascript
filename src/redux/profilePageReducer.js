@@ -53,20 +53,20 @@ export const setStatus = (status) => ({type: SET_STATUS, status})
 export const getUserProfile = (userId) => (dispatch) => {
     usersAPI.getProfile(userId)
         .then(response => {
-            dispatch(setUserProfile(response.data))
+            dispatch(setUserProfile(response))
         })
 }
 export const getStatus = (userId) => (dispatch) => {
     profileAPI.getStatus(userId)
         .then(response => {
-            dispatch(setStatus(response.data))
+            dispatch(setStatus(response))
         })
 }
 
 export const updateStatus = (status) => (dispatch) => {
     profileAPI.updateStatus(status)
         .then(response => {
-            if (response.data.resultCode === 0) {
+            if (response.resultCode === 0) {
                 dispatch(setStatus(status))
             }
         })

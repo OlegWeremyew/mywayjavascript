@@ -3,7 +3,7 @@ import profilePageReducer from "./profilePageReducer";
 import dialogsPageReducer from "./dialogsPageReducer";
 import sidebarReducer from "./sidebarReducer";
 import usersReducer from "./usersReducer";
-import {authReducer} from "./auth-reducer";
+import {authReducer} from "./authReducer";
 import thunkMiddleware from "redux-thunk";
 import {reducer as formReducer} from 'redux-form'
 import {appReducer} from "./AppReducer";

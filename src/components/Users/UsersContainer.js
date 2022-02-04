@@ -1,21 +1,28 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {
-    setCurrentPage, toggleFollowingProgress, getUsers, follow, unFollow,
+    setCurrentPage, toggleFollowingProgress, follow, unFollow, requestUsers,
 } from "../../redux/usersReducer";
 import Users from "./Users";
 import Preloader from "../../common/Preloader";
 import {compose} from "redux";
 import {withAuthRedirect} from "../../hoc/WithAuthRedirect";
+import {
+    getCurrentPage,
+    getFollowingInProgress,
+    getIsFetching,
+    getPageSize,
+    getTotalUserCount, getUsers
+} from "../../redux/UsersSelectors";
 
 class UsersAPIComponent extends React.Component {
 
     componentDidMount() {
-        this.props.getUsers(this.props.currentPage, this.props.pageSize)
+        this.props.requestUsers(this.props.currentPage, this.props.pageSize)
     }
 
     onPageChanged = (pageNumber) => {
-        this.props.getUsers(pageNumber, this.props.pageSize)
+        this.props.requestUsers(pageNumber, this.props.pageSize)
     }
 
     render() {
@@ -40,7 +47,7 @@ class UsersAPIComponent extends React.Component {
     }
 }
 
-let mapStateToProps = (state) => {
+/*let mapStateToProps = (state) => {
     return {
         users: state.usersPage.users,
         pageSize: state.usersPage.pageSize,
@@ -49,6 +56,17 @@ let mapStateToProps = (state) => {
         isFetching: state.usersPage.isFetching,
         followingInProgress: state.usersPage.followingInProgress,
     }
+}*/
+
+let mapStateToProps = (state) => {
+    return {
+        users: getUsers(state),
+        pageSize: getPageSize(state),
+        totalUserCount: getTotalUserCount(state),
+        currentPage: getCurrentPage(state),
+        isFetching: getIsFetching(state),
+        followingInProgress: getFollowingInProgress(state),
+    }
 }
 
 export const UsersContainer = compose(connect(mapStateToProps, {
@@ -56,6 +74,6 @@ export const UsersContainer = compose(connect(mapStateToProps, {
         unFollow,
         setCurrentPage,
         toggleFollowingProgress,
-        getUsers,
+        requestUsers,
     }), //withAuthRedirect
 )(UsersAPIComponent)

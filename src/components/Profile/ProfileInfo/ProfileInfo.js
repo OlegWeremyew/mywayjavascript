@@ -2,6 +2,7 @@ import React from 'react';
 import c from "./ProfileInfo.module.css"
 import avatarDefault from '../../../assets/images/icon.png'
 import {ProfileStatus} from "./ProfileStatus/ProfileStatus";
+import {ProfileStatusWithHooks} from "./ProfileStatus/ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
 
@@ -16,7 +17,7 @@ const ProfileInfo = (props) => {
                         src={props.profile && props.profile.photos.large !== null ? props.profile.photos.large : avatarDefault}
                         alt={""}/>
                 </div>
-                <ProfileStatus
+                <ProfileStatusWithHooks
                     status={props.status}
                     updateStatus={props.updateStatus}
                 />

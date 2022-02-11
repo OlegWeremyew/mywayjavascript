@@ -33,7 +33,7 @@ const Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, porti
                         <span className={cn({[styles.selectedPage]: currentPage === p}, styles.pageNumber)}
                               key={p}
                               onClick={(e) => onPageChanged(p)}>
-                        {p}
+                            {p}
                         </span>
                     )
                 })}

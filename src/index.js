@@ -1,18 +1,11 @@
 import React from 'react';
 import './index.css';
-import store from "./redux/reduxStore";
 import ReactDOM from 'react-dom';
 import './index.css';
-import {AppContainer} from './App';
-import {BrowserRouter} from "react-router-dom";
-import {Provider} from "react-redux";
+import {SamuraiJSApp} from "./App";
 
     ReactDOM.render(
-        <BrowserRouter>
-            <Provider store={store}>
-                <AppContainer/>
-            </Provider>
-        </BrowserRouter>,
+                <SamuraiJSApp/>,
         document.getElementById('root')
     );
 

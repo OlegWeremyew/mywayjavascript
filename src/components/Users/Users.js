@@ -1,7 +1,4 @@
 import React from 'react';
-import c from "./Users.module.css";
-import userPhoto from "../../assets/images/user.png";
-import {NavLink} from "react-router-dom";
 import Paginator from "../../common/Paginator/Paginator";
 import User from "./User";
 
@@ -21,7 +18,7 @@ const Users = ({
             <Paginator
                 currentPage={currentPage}
                 onPageChanged={onPageChanged}
-                totalUserCount={totalUserCount}
+                totalItemsCount={totalUserCount}
                 pageSize={pageSize}
             />
             <div>

@@ -1,13 +1,9 @@
-.userPhoto{
+.userPhoto {
     width: 100px;
     height: 100px;
 }
 
-.selectedPage{
-    font-weight: 700;
-}
-
-.numberPage{
+.numberPage {
     display: flex;
     flex-wrap: wrap;
 }

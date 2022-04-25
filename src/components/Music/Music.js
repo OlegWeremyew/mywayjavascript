@@ -6,7 +6,7 @@ const Music = () => {
         <div className={style.music_block}>
             50 cent cool man
         </div>
-    );
+    )
 }
 
-export default Music;
+export default Music

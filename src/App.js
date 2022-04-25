@@ -15,6 +15,10 @@ import {initializeApp} from "./redux/AppReducer";
 import Preloader from "./common/Preloader/Preloader";
 import store from "./redux/reduxStore";
 
+//const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
+//const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
+
+
 class App extends React.Component {
 
     componentDidMount() {
